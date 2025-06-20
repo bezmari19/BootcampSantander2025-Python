@@ -10,7 +10,7 @@ BEBIDA_FORACOMPRA = 'NÃO' #constante que verifica a resposta do usuário se nã
 
 nome_cliente = input('Digite seu nome abaixo, por favor:\n') #váriavel de entrada do nome do usuário
 idade_cliente = int(input('Digite sua idade abaixo, por favor:\n')) #váriavel de entrada da idade do usuário
-tem_bebida = input('Digite SIM para bebidade na compra e NÃO para não tem na compra:\n') #variável de entrada que verifica conforme as opções se:
+tem_bebida = input('Digite SIM para bebida na compra e NÃO para não tem na compra:\n') #variável de entrada que verifica conforme as opções se:
 #há bebida na compra 'SIM' e 'NÃO' caso não tenha
 
 if idade_cliente < IDADE_PERMITIDA and tem_bebida == BEBIDA_NACOMPRA: #condição que verifica se o usuário é menor de idade e se tem bebida na compra dele
