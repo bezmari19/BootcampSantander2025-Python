@@ -7,10 +7,10 @@ LIMITE_SAQUE2 = 1.000
 
 nome_cliente = input('Digite seu nome abaixo:\n')
 cpf_conta_titular = input('Digite o número do seu CPF para verificar a conta:\n')
-tipo_conta = int(input('Digite 1 se sua conta for de estágio e digite 2 se sua conta for universitária:\n'))
 saque_conta = int(input('Digite o quanto você quer sacar:\n'))
+tipo_conta = int(input(f'Digite {CONTA_ESTÁGIO} se sua conta for de estágio e digite {CONTA_UNIVERSITÁRIA} se sua conta for universitária:\n'))
 
-if CONTA_ESTÁGIO:
+if tipo_conta == '1':
   if saque_conta < LIMITE_SAQUE1 and saque_conta < SALDO_CONTA1:
     print('O valor do saque requerido foi aceito, espere a máquina contar as notas!')
   elif saque_conta >= LIMITE_SAQUE1 and saque_conta < SALDO_CONTA1:
@@ -18,7 +18,7 @@ if CONTA_ESTÁGIO:
   elif saque_conta == SALDO_CONTA1:
     print('Você irá retirar todo dinheiro da conta, tem certeza que quer fazer essa operação?')
 
-elif CONTA_UNIVERSITÁRIA:
+elif tipo_conta == '2':
   if saque_conta < LIMITE_SAQUE2 and saque_conta < SALDO_CONTA2:
     print('O valor do saque requerido foi aceito, espere a máquina contar as notas!')
   elif saque_conta >= LIMITE_SAQUE2 and saque_conta < SALDO_CONTA2:
