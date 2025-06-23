@@ -11,20 +11,15 @@ saque_conta = int(input('Digite o quanto você quer sacar:\n'))
 tipo_conta = int(input(f'Digite {CONTA_ESTÁGIO} se sua conta for de estágio e digite {CONTA_UNIVERSITÁRIA} se sua conta for universitária:\n'))
 
 if tipo_conta == '1':
-  if saque_conta < LIMITE_SAQUE1 and saque_conta < SALDO_CONTA1:
-    print('O valor do saque requerido foi aceito, espere a máquina contar as notas!')
-  elif saque_conta >= LIMITE_SAQUE1 and saque_conta < SALDO_CONTA1:
-    print('Você tem certeza? O limite de saque irá esceder e não poderá mais sacar por hoje. Verifique o valor disponível na conta antes de realizar a operação')
+  if saque_conta < LIMITE_SAQUE1:
+    print('Seu valor foi aceito. Aguarde, a máquina está contando as notas.')
+  elif saque_conta < LIMITE_SAQUE1 and saque_conta == LIMITE_SAQUE1:
+    print(f'O valor foi aceito. O saque requerido é igual ao limite {LIMITE_SAQUE1}. Aguarde, a máquina está contando as notas.')
+  elif saque_conta < SALDO_CONTA1 and saque_conta >= LIMITE_SAQUE1:
+    print(f'Seu valor foi aceito e corresponde ao limite de saque {LIMITE_SAQUE1}. Aguarde, a máquina está contando as notas')
   elif saque_conta == SALDO_CONTA1:
-    print('Você irá retirar todo dinheiro da conta, tem certeza que quer fazer essa operação?')
-
-elif tipo_conta == '2':
-  if saque_conta < LIMITE_SAQUE2 and saque_conta < SALDO_CONTA2:
-    print('O valor do saque requerido foi aceito, espere a máquina contar as notas!')
-  elif saque_conta >= LIMITE_SAQUE2 and saque_conta < SALDO_CONTA2:
-     print('Você tem certeza? O limite de saque irá esceder e não poderá mais sacar por hoje. Verifique o valor disponível na conta antes de realizar a operação')
-  elif saque_conta == SALDO_CONTA2:
-    print('Você irá retirar todo dinheiro da conta, tem certeza que quer fazer essa operação?')
-
-else:
-  print('Algo deu errado, tente novamente.')
+    print(f'Você está sacando todo o valor contido na conta, tem certeza se deseja continuar com a operação? O valor é: {SALDO_CONTA1}')
+  elif saque_conta > SALDO_CONTA1:
+    print(f'Você pode realizar está operação. O valor do saldo é: {SALDO_CONTA1}')
+  else: 
+    print('Ops, algo deu errado e você não pode realizar está operação! Volte ao menu.')
