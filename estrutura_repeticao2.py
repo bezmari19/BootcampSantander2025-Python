@@ -14,3 +14,7 @@ for numero in sequencia: #para cada numero na sequencia, se o numero estiver em 
         print(numero, end='\n') #ela mostra ao usuário os números pares da sequência
 
 print() #adiciona uma quebra de linha ao output
+
+#outro exemplo usando for(range)
+for i in range(0,41,2): #para cada i - numero - na lista de 0 até 40 a contagem é feita de 2 em 2 
+    print(i)  #retorna a lista de números contatos pela ordem de 2 em 2
