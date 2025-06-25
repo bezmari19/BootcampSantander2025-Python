@@ -24,3 +24,6 @@ while True: #sequência infinita
         break #o código para e...
 
 print(numero) #mostra ao usuário 
+
+#break corta o laço de repetição 
+#continue pula 
