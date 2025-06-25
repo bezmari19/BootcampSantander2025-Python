@@ -16,3 +16,4 @@ print(nome.center(10,'.').upper()) #centraliza a variável e coloca pontos nos l
 print(nome.title().center(10,'#')) #deixa a várivel com a primeira letra maiuscula, centraliza e preenche com hashtag nos luagres com espaço
 print('.'.join(nome).center(15,'*')) #coloca na varável o . entre as letras e centraliza preenchendo com asterisco o local com espago
 print('-'.join(nome).upper().rstrip()) #coloca - entre as letras da váriavel, em letra maiuscula e coloca espaço do lado direito da várivavel
+print('.'.join(nome).lower().lstrip()) #coloca . entre as letras da váriavel, letra minúscula e coloca espaço na esquerda
